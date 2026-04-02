@@ -42,12 +42,12 @@
         <br>
         <div>
             <label for="cidade">Cidade</label>
-            <input type="cidade" name="cidade" id="cidade">
+            <input type="cidade" name="cidade" id="cidade" required>
         </div>
         <br>
         <div>
-            <label>Tipo de moradia</label>
-            <select id="moradia">
+            <label for="moradia">Tipo de moradia</label>
+            <select id="moradia" name="moradia" required>
                 <option selected disabled value="">Selecione</option>
                 <option>Casa</option>
                 <option>Apartamento</option>
@@ -55,9 +55,9 @@
         </div>
         <br>
         <div>
-            <label>Possui quintal?</label>
+            <label for="moradia">Possui quintal?</label>
             <label>
-                <input type="radio" name="devweb" value="sim">Sim
+                <input type="radio" name="devweb" value="sim" required>Sim
             </label>
             <label>
                 <input type="radio" name="devweb" value="nao">Não
@@ -67,7 +67,7 @@
         <div>
             <label>Já teve pet antes?</label>
             <label>
-                <input type="radio" name="devweb" value="sim">Sim
+                <input type="radio" name="devweb" value="sim" required>Sim
             </label>
             <label>
                 <input type="radio" name="devweb" value="nao">Não
@@ -76,7 +76,7 @@
         <br>
         <div>
             <label for="horas">Quantas horas o animal ficará sozinho por dia?</label>
-            <input type="number" name="horas" id="horas">
+            <input type="number" name="horas" id="horas" min="0" step="1" placeholder="Ex: 4">
         </div>
         <br>
         <div>
