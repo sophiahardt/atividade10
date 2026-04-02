@@ -17,32 +17,32 @@
     <form>
         <div>
             <label for="nome">Nome Completo</label>
-            <input type="text" nome="nome" id="nome">
+            <input type="text" name="nome" id="nome" minlength="3" required>
         </div>
         <br>
         <div>
             <label for="email">Email</label>
-            <input type="text" nome="email" id="email">
+            <input type="text" name="email" id="email">
         </div>
         <br>
         <div>
             <label for="telefone">Telefone</label>
-            <input type="tel" nome="telefone" id="telefone" placeholder="(00) 90000-0000">
+            <input type="tel" name="telefone" id="telefone" placeholder="(00) 90000-0000" pattern="[\d\s\-\(\)]{8,}" required>
         </div>
         <br>
         <div>
             <label for="cpf">CPF</label>
-            <input type="text" nome="cpf" id="cpf" placeholder="000.000.000-00">
+            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" required>
         </div>
         <br>
         <div>
             <label for="idade">Idade</label>
-            <input type="number" nome="idade" id="idade" placeholder="Ex: 23">
+            <input type="number" name="idade" id="idade" placeholder="Ex: 23" min="18" required>
         </div>
         <br>
         <div>
             <label for="cidade">Cidade</label>
-            <input type="cidade" nome="cidade" id="cidade">
+            <input type="cidade" name="cidade" id="cidade">
         </div>
         <br>
         <div>
@@ -76,7 +76,7 @@
         <br>
         <div>
             <label for="horas">Quantas horas o animal ficará sozinho por dia?</label>
-            <input type="number" nome="horas" id="horas">
+            <input type="number" name="horas" id="horas">
         </div>
         <br>
         <div>
