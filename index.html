@@ -19,26 +19,32 @@
             <label for="nome">Nome Completo</label>
             <input type="text" nome="nome" id="nome">
         </div>
+        <br>
         <div>
             <label for="email">Email</label>
             <input type="text" nome="email" id="email">
         </div>
+        <br>
         <div>
             <label for="telefone">Telefone</label>
             <input type="tel" nome="telefone" id="telefone" placeholder="(00) 90000-0000">
         </div>
+        <br>
         <div>
             <label for="cpf">CPF</label>
             <input type="text" nome="cpf" id="cpf" placeholder="000.000.000-00">
         </div>
+        <br>
         <div>
             <label for="idade">Idade</label>
             <input type="number" nome="idade" id="idade" placeholder="Ex: 23">
         </div>
+        <br>
         <div>
             <label for="cidade">Cidade</label>
             <input type="cidade" nome="cidade" id="cidade">
         </div>
+        <br>
         <div>
             <label>Tipo de moradia</label>
             <select id="moradia">
@@ -47,6 +53,7 @@
                 <option>Apartamento</option>
             </select>
         </div>
+        <br>
         <div>
             <label>Possui quintal?</label>
             <label>
@@ -56,13 +63,33 @@
                 <input type="radio" name="devweb" value="nao">Não
             </label>
         </div>
+        <br>
         <div>
-            <label>Ja teve pet antes?</label>
+            <label>Já teve pet antes?</label>
             <label>
                 <input type="radio" name="devweb" value="sim">Sim
             </label>
             <label>
                 <input type="radio" name="devweb" value="nao">Não
+            </label>
+        </div>
+        <br>
+        <div>
+            <label for="horas">Quantas horas o animal ficará sozinho por dia?</label>
+            <input type="number" nome="horas" id="horas">
+        </div>
+        <br>
+        <div>
+            <label>Motivo da adoção</label>
+            <br>
+            <textarea id="motivo" name="motivo" minlength="10" required placeholder="Explique o motivo da adoção (mínimo 10 caracteres)"></textarea>
+        </div>
+        <br>
+        <div>
+            <label>
+                <a href="termo.de.responsabilidade">Termo de responsabilidade</a>
+                <br>
+                <input type="checkbox" id="termo"> Aceito o termo de responsabilidade
             </label>
         </div>
     </form>
