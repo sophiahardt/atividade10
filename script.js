@@ -5,13 +5,50 @@ let cpfCadastrados = [
     "333.333.333-33"
 ];
 
-
 document.getElementById("form_adocao").addEventListener("submit", function(e) {
 
+    // testar idade
     let idade = document.getElementById("idade").value;
     if (idade < 18) {
         e.preventDefault(); 
         alert("Você precisa ter 18 anos ou mais para se candidatar à adoção.");
+    }
+
+    // testar motivo
+    let motivo = document.getElementById("motivo").value.trim().toLowerCase();
+    let motivosGenericos = [
+        "quero",
+        "porque sim",
+        "sei la",
+        "seila",
+        "nao sei",
+        "porque eu quero"
+    ];
+
+    if (motivosGenericos.includes(motivo)) {
+        e.preventDefault();
+        alert("O motivo da adoção não pode ser genérico. Explique melhor seu motivo.");
+    }
+
+    // testar tempo sozinho
+    let horas = document.getElementById("horas").value;
+    if (horas > 8) {
+        e.preventDefault();
+        alert("Você não pode deixar um animal por mais de 8 horas sozinho.");
+    }
+
+    // testar se já teve pet
+    let teve_pet = document.getElementById("teve_pet").value;
+    if (teve_pet === "nao") {
+        e.preventDefault();
+        alert("Poderá haver acompanhamento da ONG");
+    }
+
+    // testar se já tem o cpf
+    let cpfCadastrados = document.getElementById("cpf").value;
+    if (cpfCadastrados.includes(cpf)) {
+        e.preventDefault();
+        alert("Esse CPF já está cadastrado no sistema.");
     }
 });
 
@@ -32,51 +69,4 @@ function verificarMoradia() {
     }
 }
 
-document.getElementById("form_adocao").addEventListener("submit", function(e) {
 
-    let motivo = document.getElementById("motivo").value.trim().toLowerCase();
-
-    let motivosGenericos = [
-        "quero",
-        "porque sim",
-        "sei la",
-        "seila",
-        "nao sei",
-        "porque eu quero"
-    ];
-
-    if (motivosGenericos.includes(motivo)) {
-        e.preventDefault();
-        alert("O motivo da adoção não pode ser genérico. Explique melhor seu motivo.");
-    }
-});
-
-document.getElementById("form_adocao").addEventListener("submit", function(e) {
-     
-        let horas = document.getElementById("horas").value;
-
-        if (horas > 8) {
-        e.preventDefault();
-        alert("Você não pode deixar um animal por mais de 8 horas sozinho.");
-    }
-});
-
-document.getElementById("form_adocao").addEventListener("submit", function(e) {
-
-    let teve_pet = document.getElementById("teve_pet").value;
-
-    if (teve_pet === "nao") {
-        e.preventDefault();
-        alert("Poderá haver acompanhamento da ONG");
-    }
-});
-
-document.getElementById("form_adocao").addEventListener("submit", function(e) {
-
-    let cpfCadastrados = document.getElementById("cpf").value;
-
-    if (cpfCadastrados.includes(cpf)) {
-        e.preventDefault();
-        alert("Esse CPF já está cadastrado no sistema.");
-    }
-});
