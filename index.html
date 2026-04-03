@@ -47,13 +47,13 @@
         <br>
         <div>
             <label for="moradia">Tipo de moradia</label>
-            <select id="moradia" name="moradia" required onchange="verificarMoradia()"></select>
+            <select id="moradia" name="moradia" required onchange="verificarMoradia()">
                 <option selected disabled value="">Selecione</option>
                 <option value="Casa">Casa</option>
                 <option value="Apartamento">Apartamento</option>
             </select>
         </div>
-        <div id="permite_animais">
+        <div id="permite_animais" style="display: none;">
             <label>O condomínio permite animais?</label>
             <label>
                 <input type="radio" name="permite_animais" value="sim" required>Sim
@@ -62,7 +62,7 @@
                 <input type="radio" name="permite_animais" value="nao">Não
             </label>
         </div>
-        <div id="quintal_seguro">
+        <div id="quintal_seguro" style="display: none;">
             <label>O quintal é seguro?</label>
             <label>
                 <input type="radio" name="quintal" value="sim">Sim
@@ -75,20 +75,20 @@
         <div>
             <label for="moradia">Possui quintal?</label>
             <label>
-                <input type="radio" name="devweb" value="sim" required>Sim
+                <input type="radio" name="tem_quintal" value="sim" required>Sim
             </label>
             <label>
-                <input type="radio" name="devweb" value="nao">Não
+                <input type="radio" name="tem_quintal" value="nao">Não
             </label>
         </div>
         <br>
         <div>
             <label>Já teve pet antes?</label>
             <label>
-                <input type="radio" name="devweb" value="sim" required>Sim
+                <input type="radio" name="teve_pet" value="sim" required>Sim
             </label>
             <label>
-                <input type="radio" name="devweb" value="nao">Não
+                <input type="radio" name="teve_pet" value="nao">Não
             </label>
         </div>
         <br>
