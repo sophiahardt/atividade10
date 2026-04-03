@@ -4,6 +4,7 @@ document.getElementById("form_adocao").addEventListener("submit", function(e) {
     if (idade < 18) {
         e.preventDefault(); 
         alert("Você precisa ter 18 anos ou mais para se candidatar à adoção.");
+        return;
     }
 });
 
@@ -27,19 +28,40 @@ function verificarMoradia() {
 document.getElementById("form_adocao").addEventListener("submit", function(e) {
 
     let horas = document.getElementById("horas").value;
+    let teve_pet = document.getElementById("teve_pet").value;
+    let motivo = document.getElementById("motivo").value.Trim().toLowerCase();
+
+    let motivosGenericos = [
+        "quero",
+        "porque sim",
+        "sei la",
+        "seila",
+        "nao sei",
+        "porque eu quero"
+    ];
+
     if (horas > 8) {
         e.preventDefault();
         alert("Você não pode deixar um animal por mais de 8 horas sozinho.");
+        return;
     }
-})
 
-document.getElementById("form_adocao").addEventListener("submit", function(e) {
-
-    let teve_pet = document.getElementById("teve_pet").value;
     if (teve_pet === "nao") {
         e.preventDefault();
         alert("Poderá haver acompanhamento da ONG");
+        return;
+    }
+
+    if (motivosGenericos.includes(motivo)) {
+        e.preventDefault();
+        alert("O motivo da adoção não pode ser genérico. Explique melhor seu motivo.");
+        return;
     }
 });
+
+
+    
+    
+
 
 
