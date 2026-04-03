@@ -7,6 +7,16 @@ document.getElementById("form_adocao").addEventListener("submit", function(e) {
     }
 });
 
+function verificarMoradia() {
+    let moradia = document.getElementById("moradia");
+    let permiteAnimais = document.getElementById("permite_animais");
+
+    if (moradia.value === "Apartamento") {
+        permiteAnimais.style.display = "block"; 
+    } else {
+        permiteAnimais.style.display = "none";  
+    }
+}
 
 
 
