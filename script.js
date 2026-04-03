@@ -81,4 +81,15 @@ function verificarMoradia() {
     }
 }
 
+function verificarSeTemQuintal() {
+   let temQuintal = document.getElementById("tem_quintal_sim").checked;
+   let quintalSeguro = document.getElementById("quintal_seguro");
+   if (temQuintal) {
+        quintalSeguro.disabled = false;
+   } else {
+        quintalSeguro.disabled = true;
+   }
+}
+
 verificarMoradia();
+verificarSeTemQuintal();

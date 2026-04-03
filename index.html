@@ -53,6 +53,7 @@
                 <option value="Apartamento">Apartamento</option>
             </select>
         </div>
+        <br>
         <div id="permite_animais">
             <label>O condomínio permite animais?</label>
             <label>
@@ -66,13 +67,14 @@
         <fieldset id="tem_quintal">
             <label for="quintal">Possui quintal?</label>
             <label>
-                <input type="radio" name="tem_quintal" value="sim" required>Sim
+                <input type="radio" id="tem_quintal_sim" name="tem_quintal" value="sim" required onchange="verificarSeTemQuintal()">Sim
             </label>
             <label>
-                <input type="radio" name="tem_quintal" value="nao">Não
+                <input type="radio" name="tem_quintal" value="nao" onchange="verificarSeTemQuintal()">Não
             </label>
         </fieldset>
-        <div id="quintal_seguro">
+        <br>
+        <fieldset id="quintal_seguro">
             <label>O quintal é seguro?</label>
             <label>
                 <input type="radio" name="quintal" value="sim">Sim
@@ -80,7 +82,7 @@
             <label>
                 <input type="radio" name="quintal" value="nao">Não
             </label>
-        </div>
+        </fieldset>
         <br>
         <div>
             <label>Já teve pet antes?</label>
