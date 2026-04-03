@@ -7,6 +7,16 @@ let cpfCadastrados = [
 
 document.getElementById("form_adocao").addEventListener("submit", function(e) {
 
+    // testar telefone
+    let telefone = document.getElementById("telefone").value;
+    let regexTelefone = /^(\(?\d{2}\)?\s?)?(9?\d{4}-?\d{4})$/;
+
+    console.log("Telefone: [" + telefone + "]");
+    if (!regexTelefone.test(telefone)) {
+        e.preventDefault();
+        alert("Telefone inválido. Use este formato: (00) 90000-0000")
+    }
+
     // testar idade
     let idade = document.getElementById("idade").value;
     if (idade < 18) {
