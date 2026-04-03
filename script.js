@@ -10,13 +10,16 @@ document.getElementById("form_adocao").addEventListener("submit", function(e) {
 function verificarMoradia() {
     let moradia = document.getElementById("moradia");
     let permiteAnimais = document.getElementById("permite_animais");
+    let quintalSeguro = document.getElementById("quintal_seguro");
 
     if (moradia.value === "Apartamento") {
         permiteAnimais.style.display = "block"; 
+        quintalSeguro.style.display = "none";
+    } else if (moradia.value === "Casa") {
+        permiteAnimais.style.display = "none"; 
+        quintalSeguro.style.display = "block";
     } else {
-        permiteAnimais.style.display = "none";  
+        permiteAnimais.style.display = "none"; 
+        quintalSeguro.style.display = "none";
     }
 }
-
-
-
