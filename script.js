@@ -23,3 +23,12 @@ function verificarMoradia() {
         quintalSeguro.style.display = "none";
     }
 }
+
+document.getElementById("form_adocao").addEventListener("submit", function(e) {
+
+    let horas = document.getElementById("horas").value;
+    if (horas > 8) {
+        e.preventDefault();
+        alert("Você não pode deixar um animal por mais de 8 horas sozinho.");
+    }
+})
