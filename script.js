@@ -1,3 +1,11 @@
+let cpfCadastrados = [
+    "111.111.111-11",
+    "111.222.333-22",
+    "222.222.222-22",
+    "333.333.333-33"
+];
+
+
 document.getElementById("form_adocao").addEventListener("submit", function(e) {
 
     let idade = document.getElementById("idade").value;
@@ -30,6 +38,7 @@ document.getElementById("form_adocao").addEventListener("submit", function(e) {
     let horas = document.getElementById("horas").value;
     let teve_pet = document.getElementById("teve_pet").value;
     let motivo = document.getElementById("motivo").value.Trim().toLowerCase();
+    let cpfCadastrados = document.getElementById("cpf").value;
 
     let motivosGenericos = [
         "quero",
@@ -55,6 +64,12 @@ document.getElementById("form_adocao").addEventListener("submit", function(e) {
     if (motivosGenericos.includes(motivo)) {
         e.preventDefault();
         alert("O motivo da adoção não pode ser genérico. Explique melhor seu motivo.");
+        return;
+    }
+
+    if (cpfCadastrados.includes(cpf)) {
+        e.preventDefault();
+        alert("Esse CPF já está cadastrado no sistema.");
         return;
     }
 });
