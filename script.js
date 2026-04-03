@@ -32,3 +32,14 @@ document.getElementById("form_adocao").addEventListener("submit", function(e) {
         alert("Você não pode deixar um animal por mais de 8 horas sozinho.");
     }
 })
+
+document.getElementById("form_adocao").addEventListener("submit", function(e) {
+
+    let teve_pet = document.getElementById("teve_pet").value;
+    if (teve_pet === "nao") {
+        e.preventDefault();
+        alert("Poderá haver acompanhamento da ONG");
+    }
+});
+
+
