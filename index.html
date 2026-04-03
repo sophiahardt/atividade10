@@ -53,16 +53,16 @@
                 <option value="Apartamento">Apartamento</option>
             </select>
         </div>
-        <div id="permite_animais" style="display: none;">
+        <div id="permite_animais">
             <label>O condomínio permite animais?</label>
             <label>
-                <input type="radio" name="permite_animais" value="sim" required>Sim
+                <input type="radio" name="permite_animais" value="sim">Sim
             </label>
             <label>
                 <input type="radio" name="permite_animais" value="nao">Não
             </label>
         </div>
-        <div id="quintal_seguro" style="display: none;">
+        <div id="quintal_seguro">
             <label>O quintal é seguro?</label>
             <label>
                 <input type="radio" name="quintal" value="sim">Sim
@@ -72,15 +72,15 @@
             </label>
         </div>
         <br>
-        <div>
-            <label for="moradia">Possui quintal?</label>
+        <fieldset id="tem_quintal">
+            <label for="quintal">Possui quintal?</label>
             <label>
                 <input type="radio" name="tem_quintal" value="sim" required>Sim
             </label>
             <label>
                 <input type="radio" name="tem_quintal" value="nao">Não
             </label>
-        </div>
+        </fieldset>
         <br>
         <div>
             <label>Já teve pet antes?</label>
@@ -94,7 +94,7 @@
         <br>
         <div>
             <label for="horas">Quantas horas o animal ficará sozinho por dia?</label>
-            <input type="number" name="horas" id="horas" min="0" step="1" placeholder="Ex: 4" onchange="verificarHoraSozinho()">
+            <input type="number" name="horas" id="horas" min="0" step="1" placeholder="Ex: 4">
         </div>
         <br>
         <div>

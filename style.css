@@ -16,3 +16,8 @@ position: fixed;
 #form_adocao {
     
 }
+
+fieldset {
+  border: none;
+  padding: 0;
+}

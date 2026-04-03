@@ -15,6 +15,8 @@ document.getElementById("form_adocao").addEventListener("submit", function(e) {
     }
 
     // testar motivo
+
+    console.log("motivo [" + document.getElementById("motivo").value + "]");
     let motivo = document.getElementById("motivo").value.trim().toLowerCase();
     let motivosGenericos = [
         "quero",
@@ -38,35 +40,45 @@ document.getElementById("form_adocao").addEventListener("submit", function(e) {
     }
 
     // testar se já teve pet
-    let teve_pet = document.getElementById("teve_pet").value;
-    if (teve_pet === "nao") {
-        e.preventDefault();
+    let teve_pet_nao = document.getElementById("teve_pet_nao").checked;
+    if (teve_pet_nao) {
+        // e.preventDefault();
         alert("Poderá haver acompanhamento da ONG");
     }
 
     // testar se já tem o cpf
-    let cpfCadastrados = document.getElementById("cpf").value;
+    let cpf = document.getElementById("cpf").value;
     if (cpfCadastrados.includes(cpf)) {
         e.preventDefault();
         alert("Esse CPF já está cadastrado no sistema.");
     }
 });
 
+
 function verificarMoradia() {
     let moradia = document.getElementById("moradia");
     let permiteAnimais = document.getElementById("permite_animais");
     let quintalSeguro = document.getElementById("quintal_seguro");
+    let temQuintal = document.getElementById("tem_quintal");
 
     if (moradia.value === "Apartamento") {
         permiteAnimais.style.display = "block"; 
         quintalSeguro.style.display = "none";
+
+        temQuintal.disabled = true;
+
     } else if (moradia.value === "Casa") {
         permiteAnimais.style.display = "none"; 
         quintalSeguro.style.display = "block";
+
+        temQuintal.disabled = false;
+
     } else {
         permiteAnimais.style.display = "none"; 
         quintalSeguro.style.display = "none";
+        temQuintal.disabled = true;
+
     }
 }
 
-
+verificarMoradia();
